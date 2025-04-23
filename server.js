@@ -83,8 +83,8 @@ app.post('/webhook', async (req, res) => {
             console.log('Metadata:', metadata);
 
             // Here you can implement the logic to transfer tokens to the user
-            console.log('Payment successful for user:', metadata.userPrincipal);
-            console.log('Amount in ICP to transfer:', metadata.amountInIcp);
+            console.log('Payment successful for user:', metadata);
+            
 
             // Add your token transfer logic here
         }
