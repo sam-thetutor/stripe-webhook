@@ -1,0 +1,20 @@
+// Version: 1.0.0
+type Transaction =
+  {
+    destinationAddress : Text;
+    destinationCanisterId : Text;
+    error : ?Text;
+    fromAmount : ?Text;
+    isPaid : Bool;
+    paymentLinkId : Text;
+    price : ?Text;
+    slippage : ?Text;
+    swapTxId : ?Text;
+    toAmount : ?Text;
+    tokenAmount : Text;
+    tokenSymbol : Text;
+    usdAmount : Text
+  };
+actor {
+  stable var transactionStore : [(Text, Transaction)]
+};

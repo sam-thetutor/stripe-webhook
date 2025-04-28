@@ -1,0 +1,13 @@
+type StorageCanister = service {
+  checkPaymentStatus : (text) -> (bool);
+  storeTransaction : (Transaction) -> (bool);
+};
+type Transaction = record {
+  destinationAddress : text;
+  usdAmount : text;
+  isPaid : bool;
+  tokenAmount : text;
+  tokenSymbol : text;
+  paymentLinkId : text;
+};
+service : StorageCanister

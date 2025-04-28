@@ -1,0 +1,21 @@
+type StorageCanister = service {
+  checkPaymentStatus : (text) -> (bool);
+  getAllTransactions : () -> (vec record { text; Transaction });
+  storeTransaction : (Transaction) -> (bool);
+  updateTransaction : (text, Transaction) -> (bool);
+};
+type Transaction = record {
+  fromAmount : opt text;
+  destinationAddress : text;
+  usdAmount : text;
+  isPaid : bool;
+  tokenAmount : text;
+  tokenSymbol : text;
+  swapTxId : opt text;
+  destinationCanisterId : text;
+  price : opt text;
+  toAmount : opt text;
+  paymentLinkId : text;
+  slippage : opt text;
+};
+service : StorageCanister

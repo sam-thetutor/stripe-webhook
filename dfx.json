@@ -1,0 +1,17 @@
+
+
+{
+    "canisters": {
+      "storage_canister": {
+        "main": "backend/main.mo",
+        "type": "motoko"
+      }
+    },
+    "defaults": {
+      "build": {
+        "args": "",
+        "packtool": ""
+      }
+    },
+    "version": 1
+  }
